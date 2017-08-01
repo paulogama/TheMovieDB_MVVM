@@ -8,11 +8,13 @@
 
 /* Begin PBXBuildFile section */
 		C91D47A71F30ED5A000CDA09 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47A61F30ED5A000CDA09 /* AppDelegate.swift */; };
-		C91D47A91F30ED5A000CDA09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47A81F30ED5A000CDA09 /* ViewController.swift */; };
 		C91D47AC1F30ED5B000CDA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AA1F30ED5B000CDA09 /* Main.storyboard */; };
 		C91D47AE1F30ED5B000CDA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AD1F30ED5B000CDA09 /* Assets.xcassets */; };
 		C91D47B11F30ED5B000CDA09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AF1F30ED5B000CDA09 /* LaunchScreen.storyboard */; };
 		C91D47BC1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47BB1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift */; };
+		C91D47CB1F30F0BF000CDA09 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CA1F30F0BF000CDA09 /* Model.swift */; };
+		C91D47CD1F30F0DE000CDA09 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */; };
+		C91D47CF1F30F107000CDA09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CE1F30F107000CDA09 /* ViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -28,7 +30,6 @@
 /* Begin PBXFileReference section */
 		C91D47A31F30ED5A000CDA09 /* TheMovieDB_MVVM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieDB_MVVM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91D47A61F30ED5A000CDA09 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		C91D47A81F30ED5A000CDA09 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		C91D47AB1F30ED5B000CDA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		C91D47AD1F30ED5B000CDA09 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		C91D47B01F30ED5B000CDA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -36,6 +37,9 @@
 		C91D47B71F30ED5B000CDA09 /* TheMovieDB_MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDB_MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		C91D47BB1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDB_MVVMTests.swift; sourceTree = "<group>"; };
 		C91D47BD1F30ED5B000CDA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C91D47CA1F30F0BF000CDA09 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
+		C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = ViewModel/ViewModel.swift; sourceTree = "<group>"; };
+		C91D47CE1F30F107000CDA09 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = View/ViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -77,12 +81,10 @@
 		C91D47A51F30ED5A000CDA09 /* TheMovieDB_MVVM */ = {
 			isa = PBXGroup;
 			children = (
-				C91D47A61F30ED5A000CDA09 /* AppDelegate.swift */,
-				C91D47A81F30ED5A000CDA09 /* ViewController.swift */,
-				C91D47AA1F30ED5B000CDA09 /* Main.storyboard */,
-				C91D47AD1F30ED5B000CDA09 /* Assets.xcassets */,
-				C91D47AF1F30ED5B000CDA09 /* LaunchScreen.storyboard */,
-				C91D47B21F30ED5B000CDA09 /* Info.plist */,
+				C91D47C61F30EF1E000CDA09 /* Model */,
+				C91D47C71F30EF26000CDA09 /* View */,
+				C91D47C81F30EF2C000CDA09 /* ViewModel */,
+				C91D47C91F30EF68000CDA09 /* Supporting Files */,
 			);
 			path = TheMovieDB_MVVM;
 			sourceTree = "<group>";
@@ -94,6 +96,42 @@
 				C91D47BD1F30ED5B000CDA09 /* Info.plist */,
 			);
 			path = TheMovieDB_MVVMTests;
+			sourceTree = "<group>";
+		};
+		C91D47C61F30EF1E000CDA09 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				C91D47CA1F30F0BF000CDA09 /* Model.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		C91D47C71F30EF26000CDA09 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				C91D47AA1F30ED5B000CDA09 /* Main.storyboard */,
+				C91D47CE1F30F107000CDA09 /* ViewController.swift */,
+			);
+			name = View;
+			sourceTree = "<group>";
+		};
+		C91D47C81F30EF2C000CDA09 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */,
+			);
+			name = ViewModel;
+			sourceTree = "<group>";
+		};
+		C91D47C91F30EF68000CDA09 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				C91D47A61F30ED5A000CDA09 /* AppDelegate.swift */,
+				C91D47AD1F30ED5B000CDA09 /* Assets.xcassets */,
+				C91D47AF1F30ED5B000CDA09 /* LaunchScreen.storyboard */,
+				C91D47B21F30ED5B000CDA09 /* Info.plist */,
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -201,8 +239,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91D47A91F30ED5A000CDA09 /* ViewController.swift in Sources */,
 				C91D47A71F30ED5A000CDA09 /* AppDelegate.swift in Sources */,
+				C91D47CD1F30F0DE000CDA09 /* ViewModel.swift in Sources */,
+				C91D47CF1F30F107000CDA09 /* ViewController.swift in Sources */,
+				C91D47CB1F30F0BF000CDA09 /* Model.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -412,6 +452,7 @@
 				C91D47C21F30ED5B000CDA09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		C91D47C31F30ED5B000CDA09 /* Build configuration list for PBXNativeTarget "TheMovieDB_MVVMTests" */ = {
 			isa = XCConfigurationList;
@@ -420,6 +461,7 @@
 				C91D47C51F30ED5B000CDA09 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
