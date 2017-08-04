@@ -11,10 +11,14 @@
 		C91D47AC1F30ED5B000CDA09 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AA1F30ED5B000CDA09 /* Main.storyboard */; };
 		C91D47AE1F30ED5B000CDA09 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AD1F30ED5B000CDA09 /* Assets.xcassets */; };
 		C91D47B11F30ED5B000CDA09 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C91D47AF1F30ED5B000CDA09 /* LaunchScreen.storyboard */; };
-		C91D47BC1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47BB1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift */; };
-		C91D47CB1F30F0BF000CDA09 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CA1F30F0BF000CDA09 /* Model.swift */; };
-		C91D47CD1F30F0DE000CDA09 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */; };
-		C91D47CF1F30F107000CDA09 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CE1F30F107000CDA09 /* ViewController.swift */; };
+		C91D47CB1F30F0BF000CDA09 /* Application.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CA1F30F0BF000CDA09 /* Application.swift */; };
+		C91D47CD1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CC1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift */; };
+		C91D47CF1F30F107000CDA09 /* ApplicationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47CE1F30F107000CDA09 /* ApplicationViewController.swift */; };
+		C91D47D41F3118A4000CDA09 /* ApplicationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = C91D47D21F3118A4000CDA09 /* ApplicationTableViewCell.swift */; };
+		C91D47D51F3118A4000CDA09 /* ApplicationTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = C91D47D31F3118A4000CDA09 /* ApplicationTableViewCell.xib */; };
+		C93B7CB51F32381E008A5A2D /* APIClient.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B7CB41F32381E008A5A2D /* APIClient.swift */; };
+		C93B7CBA1F33DCE5008A5A2D /* UIImageView+URL.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B7CB91F33DCE5008A5A2D /* UIImageView+URL.swift */; };
+		C93B7CBC1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B7CBB1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +39,15 @@
 		C91D47B01F30ED5B000CDA09 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		C91D47B21F30ED5B000CDA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		C91D47B71F30ED5B000CDA09 /* TheMovieDB_MVVMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TheMovieDB_MVVMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		C91D47BB1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TheMovieDB_MVVMTests.swift; sourceTree = "<group>"; };
 		C91D47BD1F30ED5B000CDA09 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		C91D47CA1F30F0BF000CDA09 /* Model.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Model.swift; path = Model/Model.swift; sourceTree = "<group>"; };
-		C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewModel.swift; path = ViewModel/ViewModel.swift; sourceTree = "<group>"; };
-		C91D47CE1F30F107000CDA09 /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = View/ViewController.swift; sourceTree = "<group>"; };
+		C91D47CA1F30F0BF000CDA09 /* Application.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = Application.swift; path = Model/Application.swift; sourceTree = "<group>"; };
+		C91D47CC1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationOverviewViewModel.swift; path = ViewModel/ApplicationOverviewViewModel.swift; sourceTree = "<group>"; };
+		C91D47CE1F30F107000CDA09 /* ApplicationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationViewController.swift; path = View/ApplicationViewController.swift; sourceTree = "<group>"; };
+		C91D47D21F3118A4000CDA09 /* ApplicationTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationTableViewCell.swift; path = View/ApplicationOverview/ApplicationTableViewCell.swift; sourceTree = "<group>"; };
+		C91D47D31F3118A4000CDA09 /* ApplicationTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = ApplicationTableViewCell.xib; path = View/ApplicationOverview/ApplicationTableViewCell.xib; sourceTree = "<group>"; };
+		C93B7CB41F32381E008A5A2D /* APIClient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = APIClient.swift; path = Services/APIClient.swift; sourceTree = "<group>"; };
+		C93B7CB91F33DCE5008A5A2D /* UIImageView+URL.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = "UIImageView+URL.swift"; path = "Extensions/UIImageView+URL.swift"; sourceTree = "<group>"; };
+		C93B7CBB1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationOverviewViewModelTests.swift; path = ViewModel/ApplicationOverviewViewModelTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -81,9 +89,11 @@
 		C91D47A51F30ED5A000CDA09 /* TheMovieDB_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C93B7CB81F33DC90008A5A2D /* Extensions */,
 				C91D47C61F30EF1E000CDA09 /* Model */,
 				C91D47C71F30EF26000CDA09 /* View */,
 				C91D47C81F30EF2C000CDA09 /* ViewModel */,
+				C91D47D01F310BFB000CDA09 /* Services */,
 				C91D47C91F30EF68000CDA09 /* Supporting Files */,
 			);
 			path = TheMovieDB_MVVM;
@@ -92,8 +102,8 @@
 		C91D47BA1F30ED5B000CDA09 /* TheMovieDB_MVVMTests */ = {
 			isa = PBXGroup;
 			children = (
-				C91D47BB1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift */,
 				C91D47BD1F30ED5B000CDA09 /* Info.plist */,
+				C93B7CBB1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift */,
 			);
 			path = TheMovieDB_MVVMTests;
 			sourceTree = "<group>";
@@ -101,7 +111,7 @@
 		C91D47C61F30EF1E000CDA09 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				C91D47CA1F30F0BF000CDA09 /* Model.swift */,
+				C91D47CA1F30F0BF000CDA09 /* Application.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -109,8 +119,9 @@
 		C91D47C71F30EF26000CDA09 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				C91D47D11F3117FC000CDA09 /* ApplicationOverview */,
 				C91D47AA1F30ED5B000CDA09 /* Main.storyboard */,
-				C91D47CE1F30F107000CDA09 /* ViewController.swift */,
+				C91D47CE1F30F107000CDA09 /* ApplicationViewController.swift */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -118,7 +129,7 @@
 		C91D47C81F30EF2C000CDA09 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
-				C91D47CC1F30F0DE000CDA09 /* ViewModel.swift */,
+				C91D47CC1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift */,
 			);
 			name = ViewModel;
 			sourceTree = "<group>";
@@ -132,6 +143,31 @@
 				C91D47B21F30ED5B000CDA09 /* Info.plist */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		C91D47D01F310BFB000CDA09 /* Services */ = {
+			isa = PBXGroup;
+			children = (
+				C93B7CB41F32381E008A5A2D /* APIClient.swift */,
+			);
+			name = Services;
+			sourceTree = "<group>";
+		};
+		C91D47D11F3117FC000CDA09 /* ApplicationOverview */ = {
+			isa = PBXGroup;
+			children = (
+				C91D47D21F3118A4000CDA09 /* ApplicationTableViewCell.swift */,
+				C91D47D31F3118A4000CDA09 /* ApplicationTableViewCell.xib */,
+			);
+			name = ApplicationOverview;
+			sourceTree = "<group>";
+		};
+		C93B7CB81F33DC90008A5A2D /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				C93B7CB91F33DCE5008A5A2D /* UIImageView+URL.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -219,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91D47D51F3118A4000CDA09 /* ApplicationTableViewCell.xib in Resources */,
 				C91D47B11F30ED5B000CDA09 /* LaunchScreen.storyboard in Resources */,
 				C91D47AE1F30ED5B000CDA09 /* Assets.xcassets in Resources */,
 				C91D47AC1F30ED5B000CDA09 /* Main.storyboard in Resources */,
@@ -239,10 +276,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C91D47D41F3118A4000CDA09 /* ApplicationTableViewCell.swift in Sources */,
 				C91D47A71F30ED5A000CDA09 /* AppDelegate.swift in Sources */,
-				C91D47CD1F30F0DE000CDA09 /* ViewModel.swift in Sources */,
-				C91D47CF1F30F107000CDA09 /* ViewController.swift in Sources */,
-				C91D47CB1F30F0BF000CDA09 /* Model.swift in Sources */,
+				C91D47CD1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift in Sources */,
+				C91D47CF1F30F107000CDA09 /* ApplicationViewController.swift in Sources */,
+				C91D47CB1F30F0BF000CDA09 /* Application.swift in Sources */,
+				C93B7CBA1F33DCE5008A5A2D /* UIImageView+URL.swift in Sources */,
+				C93B7CB51F32381E008A5A2D /* APIClient.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -250,7 +290,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C91D47BC1F30ED5B000CDA09 /* TheMovieDB_MVVMTests.swift in Sources */,
+				C93B7CBC1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

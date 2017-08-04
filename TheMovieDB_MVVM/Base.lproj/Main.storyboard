@@ -1,11 +1,57 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12121" systemVersion="16G29" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mx4-Y8-x9Y">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12089"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Application View Controller-->
+        <scene sceneID="aHx-3d-8cB">
+            <objects>
+                <viewController id="Mx4-Y8-x9Y" customClass="ApplicationViewController" customModule="TheMovieDB_MVVM" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="JCW-iS-Ief"/>
+                        <viewControllerLayoutGuide type="bottom" id="Jc8-05-cdj"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="eDI-5X-hws">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="rai-ge-3Vh">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="Mx4-Y8-x9Y" id="OvW-cq-kTa"/>
+                                    <outlet property="delegate" destination="Mx4-Y8-x9Y" id="ohl-SD-6zr"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="rai-ge-3Vh" firstAttribute="top" secondItem="eDI-5X-hws" secondAttribute="top" id="0Mr-ma-WrP"/>
+                            <constraint firstItem="rai-ge-3Vh" firstAttribute="bottom" secondItem="Jc8-05-cdj" secondAttribute="top" id="OFx-hJ-FkZ"/>
+                            <constraint firstItem="rai-ge-3Vh" firstAttribute="leading" secondItem="eDI-5X-hws" secondAttribute="leading" id="kHv-m8-wiK"/>
+                            <constraint firstAttribute="trailing" secondItem="rai-ge-3Vh" secondAttribute="trailing" id="tAt-1u-yol"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="applicationViewModel" destination="9Kc-dT-TCQ" id="0Xc-Hb-njC"/>
+                        <outlet property="applicationsTableView" destination="rai-ge-3Vh" id="5UD-Yv-jxl"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BfD-Vh-otc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <customObject id="zoy-Bi-Zma" customClass="APIClient" customModule="TheMovieDB_MVVM" customModuleProvider="target"/>
+                <customObject id="9Kc-dT-TCQ" customClass="ApplicationOverviewViewModel" customModule="TheMovieDB_MVVM" customModuleProvider="target">
+                    <connections>
+                        <outlet property="apiClient" destination="zoy-Bi-Zma" id="GDv-0b-zdo"/>
+                    </connections>
+                </customObject>
+            </objects>
+            <point key="canvasLocation" x="276" y="124.58770614692655"/>
+        </scene>
+    </scenes>
 </document>

@@ -1,15 +1,16 @@
 //
-//  TheMovieDB_MVVMTests.swift
-//  TheMovieDB_MVVMTests
+//  ApplicationOverviewViewModelTests.swift
+//  TheMovieDB_MVVM
 //
-//  Created by Paulo Gama on 01/08/17.
+//  Created by Paulo Gama on 04/08/17.
 //  Copyright © 2017 Paulo Gama. All rights reserved.
 //
 
 import XCTest
+
 @testable import TheMovieDB_MVVM
 
-class TheMovieDB_MVVMTests: XCTestCase {
+class ApplicationOverviewViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
