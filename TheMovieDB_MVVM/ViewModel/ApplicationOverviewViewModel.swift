@@ -8,7 +8,7 @@
 
 import UIKit
 
-class ApplicationOverviewViewModel: NSObject {
+class ApplicationOverviewViewModel: NSObject, ApplicationViewModel {
 
     @IBOutlet var apiClient: APIClient!
     

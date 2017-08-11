@@ -14,24 +14,33 @@ class ApplicationOverviewViewModelTests: XCTestCase {
     
     override func setUp() {
         super.setUp()
-        // Put setup code here. This method is called before the invocation of each test method in the class.
+        
     }
     
     override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
+        
         super.tearDown()
     }
     
-    func testExample() {
-        // This is an example of a functional test case.
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure {
-            // Put the code you want to measure the time of here.
-        }
+    func testParseDictionary() {
+//        
+//        stub(condition: isHost("https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free-games/10/explicit/json")) {_ in 
+//            return OHHTTPStubsResponse(
+//                fileAtPath: OHPathForFile("stub.json", type(of: self))!,
+//                statusCode: 200,
+//                headers: ["Content-Type":"application/json"]
+//            )
+//        }.name = "test"
+//        
+//        OHHTTPStubs.onStubActivation { (request, descriptor, response) in
+//            print("\(request.url!), stubbed by \(descriptor.name!) with response \(response.statusCode)")
+//        }
+//        
+//        let viewModel = ApplicationViewModel()
+//        viewModel.getApps {
+//            print(viewModel.apps)
+//        }
+        
     }
     
 }
