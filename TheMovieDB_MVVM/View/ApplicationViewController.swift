@@ -26,8 +26,7 @@ class ApplicationViewController: UIViewController {
     }
     
     func adjustTableView() {
-        applicationsTableView.register(UINib(nibName: "ApplicationTableViewCell", bundle: nil),
-                                       forCellReuseIdentifier: cellIdentifier)
+        applicationsTableView.register(ApplicationTableViewCell.self)
 
         applicationsTableView.rowHeight = UITableViewAutomaticDimension
         applicationsTableView.estimatedRowHeight = 71
@@ -42,7 +41,7 @@ extension ApplicationViewController: UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! ApplicationTableViewCell
+        let cell: ApplicationTableViewCell = tableView.dequeueReusableCell(forIndexPath: indexPath)
         
         cell.artImageView.downloadFrom(url: applicationViewModel.appArtToDisplay(for: indexPath))
         cell.applicationLabel.text = applicationViewModel.appNameToDisplay(for: indexPath)

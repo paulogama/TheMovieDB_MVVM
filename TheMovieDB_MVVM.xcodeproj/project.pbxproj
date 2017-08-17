@@ -23,6 +23,9 @@
 		C93B7CBC1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C93B7CBB1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift */; };
 		C9DF82C61F38E59100A67D6C /* stub.json in Resources */ = {isa = PBXBuildFile; fileRef = C9DF82C51F38E59100A67D6C /* stub.json */; };
 		C9DF82C91F3A39BF00A67D6C /* ApplicationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF82C81F3A39BF00A67D6C /* ApplicationViewModel.swift */; };
+		C9DF82CB1F45055200A67D6C /* UITableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF82CA1F45055200A67D6C /* UITableView.swift */; };
+		C9DF82CE1F45068500A67D6C /* ReusableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF82CD1F45068500A67D6C /* ReusableView.swift */; };
+		C9DF82D01F45072100A67D6C /* NibLoadableView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C9DF82CF1F45072100A67D6C /* NibLoadableView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +63,9 @@
 		C93B7CBB1F351148008A5A2D /* ApplicationOverviewViewModelTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationOverviewViewModelTests.swift; path = ViewModel/ApplicationOverviewViewModelTests.swift; sourceTree = "<group>"; };
 		C9DF82C51F38E59100A67D6C /* stub.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = stub.json; sourceTree = "<group>"; };
 		C9DF82C81F3A39BF00A67D6C /* ApplicationViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ApplicationViewModel.swift; path = ViewModel/ApplicationViewModel.swift; sourceTree = "<group>"; };
+		C9DF82CA1F45055200A67D6C /* UITableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = UITableView.swift; path = Extensions/UITableView.swift; sourceTree = "<group>"; };
+		C9DF82CD1F45068500A67D6C /* ReusableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReusableView.swift; path = Protocols/ReusableView.swift; sourceTree = "<group>"; };
+		C9DF82CF1F45072100A67D6C /* NibLoadableView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = NibLoadableView.swift; path = Protocols/NibLoadableView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -125,6 +131,7 @@
 		C91D47A51F30ED5A000CDA09 /* TheMovieDB_MVVM */ = {
 			isa = PBXGroup;
 			children = (
+				C9DF82CC1F45065800A67D6C /* Protocols */,
 				C93B7CB81F33DC90008A5A2D /* Extensions */,
 				C91D47C61F30EF1E000CDA09 /* Model */,
 				C91D47C71F30EF26000CDA09 /* View */,
@@ -204,8 +211,18 @@
 			isa = PBXGroup;
 			children = (
 				C93B7CB91F33DCE5008A5A2D /* UIImageView+URL.swift */,
+				C9DF82CA1F45055200A67D6C /* UITableView.swift */,
 			);
 			name = Extensions;
+			sourceTree = "<group>";
+		};
+		C9DF82CC1F45065800A67D6C /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				C9DF82CD1F45068500A67D6C /* ReusableView.swift */,
+				C9DF82CF1F45072100A67D6C /* NibLoadableView.swift */,
+			);
+			name = Protocols;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -415,10 +432,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				C91D47D41F3118A4000CDA09 /* ApplicationTableViewCell.swift in Sources */,
+				C9DF82CE1F45068500A67D6C /* ReusableView.swift in Sources */,
 				C91D47A71F30ED5A000CDA09 /* AppDelegate.swift in Sources */,
 				C91D47CD1F30F0DE000CDA09 /* ApplicationOverviewViewModel.swift in Sources */,
 				C91D47CF1F30F107000CDA09 /* ApplicationViewController.swift in Sources */,
+				C9DF82D01F45072100A67D6C /* NibLoadableView.swift in Sources */,
 				C91D47CB1F30F0BF000CDA09 /* Application.swift in Sources */,
+				C9DF82CB1F45055200A67D6C /* UITableView.swift in Sources */,
 				C9DF82C91F3A39BF00A67D6C /* ApplicationViewModel.swift in Sources */,
 				C93B7CBA1F33DCE5008A5A2D /* UIImageView+URL.swift in Sources */,
 				C93B7CB51F32381E008A5A2D /* APIClient.swift in Sources */,

@@ -12,7 +12,7 @@ class APIClient: NSObject {
 
     func fetchAppList(completion: @escaping ([NSDictionary]?) -> Void) {
         
-        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free-games/10/explicit/json") else {
+        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/br/ios-apps/new-games-we-love/10/explicit.json") else {
             return
         }
         
