@@ -10,9 +10,9 @@ import UIKit
 
 class APIClient: NSObject {
 
-    func fetchAppList(completion: @escaping ([NSDictionary]?) -> Void) {
+    func fetchAppList(completion: @escaping ([[String: Any]]?) -> Void) {
         
-        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/br/ios-apps/new-games-we-love/10/explicit.json") else {
+        guard let url = URL(string: "https://rss.itunes.apple.com/api/v1/br/ios-apps/new-apps-we-love/10/explicit.json") else {
             return
         }
         
@@ -23,10 +23,11 @@ class APIClient: NSObject {
             
             do {
                 if let responseJSON = try JSONSerialization.jsonObject(with: unwrappedData,
-                                                                       options: .allowFragments) as? NSDictionary {
+                options: .allowFragments) as? [String: Any] {
                     
-                    if let apps = responseJSON.value(forKeyPath: "feed.results") as? [NSDictionary] {
-                        completion(apps)
+                    if let feed = responseJSON["feed"] as? [String: Any],
+                    let results = feed["results"] as? [[String: Any]] {
+                        completion(results)
                     }
                     
                 }

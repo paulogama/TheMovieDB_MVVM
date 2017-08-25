@@ -15,10 +15,10 @@ class ApplicationOverviewViewModel: NSObject, ApplicationViewModel {
     var apps = [Application]()
     
     func getApps(completion: @escaping () -> Void) {
-        apiClient.fetchAppList { [weak self] (appsArray) in
+        apiClient.fetchAppList { [weak self] (appsJSON) in
             DispatchQueue.main.async {
-                if let appsArray = appsArray {
-                    self?.parseArray(appsArray)
+                if let appsJSON = appsJSON {
+                    self?.parseJSON(appsJSON)
                     completion()
                 }
             }
@@ -26,11 +26,16 @@ class ApplicationOverviewViewModel: NSObject, ApplicationViewModel {
         
     }
     
-    fileprivate func parseArray(_ arrayDictionary: [NSDictionary]) {
-        for dictionary in arrayDictionary {
-            if let application = Application(dictionary: dictionary) {
+    fileprivate func parseJSON(_ jsonArray: [[String: Any]]) {
+        do {
+            for json in jsonArray {
+                let application = try Application(json: json)
                 apps.append(application)
             }
+        } catch Serialization.missing(let missing) {
+            print("Data '\(missing)' is missing")
+        } catch {
+            print("General error: \(error.localizedDescription)")
         }
     }
     

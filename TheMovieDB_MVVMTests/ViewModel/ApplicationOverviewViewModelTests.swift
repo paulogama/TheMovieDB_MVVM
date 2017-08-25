@@ -12,6 +12,10 @@ import XCTest
 
 class ApplicationOverviewViewModelTests: XCTestCase {
     
+    let application = Application(name: "Snake VS Block",
+                                  author: "Voodoo",
+                                  art: "http://is2.mzstatic.com/image/thumb/Purple118/v4/c2/95/c3/c295c3d3-38eb-8213-f0f1-49b8d5fc63c1/source/200x200bb.png")
+    
     override func setUp() {
         super.setUp()
         
@@ -22,25 +26,31 @@ class ApplicationOverviewViewModelTests: XCTestCase {
         super.tearDown()
     }
     
-    func testParseDictionary() {
-//        
-//        stub(condition: isHost("https://rss.itunes.apple.com/api/v1/br/ios-apps/top-free-games/10/explicit/json")) {_ in 
-//            return OHHTTPStubsResponse(
-//                fileAtPath: OHPathForFile("stub.json", type(of: self))!,
-//                statusCode: 200,
-//                headers: ["Content-Type":"application/json"]
-//            )
-//        }.name = "test"
-//        
-//        OHHTTPStubs.onStubActivation { (request, descriptor, response) in
-//            print("\(request.url!), stubbed by \(descriptor.name!) with response \(response.statusCode)")
-//        }
-//        
-//        let viewModel = ApplicationViewModel()
-//        viewModel.getApps {
-//            print(viewModel.apps)
-//        }
+    func testReturnsValidViewModel() {
+        let applicationViewModel = ApplicationOverviewViewModel()
         
+        applicationViewModel.apps.append(application)
+
+        XCTAssertEqual(applicationViewModel.apps.count, 1)
     }
+    
+    func testReturnsValidDataSource() {
+        let application2 = Application(name: "Palavra Guru",
+                                      author: "Zentertain Ltd.",
+                                      art: "http://is1.mzstatic.com/image/thumb/Purple127/v4/86/7a/46/867a461e-54bd-44dc-93a3-5405bc0a8731/source/200x200bb.png")
+        
+        let applicationViewModel = ApplicationOverviewViewModel()
+        
+        applicationViewModel.apps.append(application)
+        applicationViewModel.apps.append(application2)
+        
+        let indexPath = IndexPath(row: 1, section: 0)
+        
+        XCTAssertEqual(2, applicationViewModel.numberOfItemsToDisplay(in: 0))
+        XCTAssertEqual(applicationViewModel.apps[1].name, applicationViewModel.appNameToDisplay(for: indexPath))
+        XCTAssertEqual(applicationViewModel.apps[1].author, applicationViewModel.appAuthorToDisplay(for: indexPath))
+        XCTAssertEqual(applicationViewModel.apps[1].art, applicationViewModel.appArtToDisplay(for: indexPath))
+    }
+    
     
 }

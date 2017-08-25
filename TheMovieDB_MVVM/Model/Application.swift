@@ -8,24 +8,38 @@
 
 import Foundation
 
-class Application {
+enum Serialization: Error {
+    case missing(String)
+    case invalid(String, Any)
+}
+
+struct Application {
     
-    var name: String
-    var author: String
-    var art: String
+    let name: String
+    let author: String
+    let art: String
     
-    init(name: String, author: String, art: String) {
+}
+
+extension Application {
+    
+    init(json: [String: Any]) throws {
+        
+        guard let name = json["name"] as? String else {
+            throw Serialization.missing("name")
+        }
+        
+        guard let author = json["artistName"] as? String else {
+            throw Serialization.missing("artistName")
+        }
+        
+        guard let art = json["artworkUrl100"] as? String else {
+            throw Serialization.missing("artworkUrl100")
+        }
+        
         self.name = name
         self.author = author
         self.art = art
-    }
-    
-    convenience init?(dictionary: NSDictionary) {
-        guard let name = dictionary["name"] as? String else { return nil }
-        guard let author = dictionary["artistName"] as? String else { return nil }
-        guard let art = dictionary["artworkUrl100"] as? String else { return nil }
-        
-        self.init(name: name, author: author, art: art)
     }
     
 }
